@@ -109,9 +109,9 @@ void RegulatorPID::setNastawy(double k, double Ti, double Td, LiczCalk tryb) {
     if (tryb != m_liczCalk)
     {
         if (tryb == LiczCalk::Wew)
-            m_suma_e = m_suma_e * m_Ti * 1.0;
-        else
             m_suma_e = m_suma_e / m_Ti * 1.0;
+        else
+            m_suma_e = m_suma_e * m_Ti * 1.0;
     }
 
 
